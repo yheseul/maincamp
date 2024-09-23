@@ -1,0 +1,1 @@
+const MyBtn = <button>register</button>
