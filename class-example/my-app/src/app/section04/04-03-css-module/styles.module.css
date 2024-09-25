@@ -1,0 +1,11 @@
+.button {
+  background-color: yellow;
+  @apply text-blueColor;
+}
+
+.box {
+  /* background-color: blue; */
+  width:200px;
+  height: 200px;
+  @apply bg-greenColor;
+}

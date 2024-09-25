@@ -1,0 +1,19 @@
+.button {
+  background-color: yellow;
+  @apply text-blueColor;
+}
+
+.box1 {
+  /* background-color: blue; */
+  width:200px;
+  height: 200px;
+  @apply bg-greenColor;
+}
+
+.box2 {
+    /* background-color: blue; */
+    width:200px;
+    height: 200px;
+    padding: 30px;
+    @apply bg-blueColor;
+}
