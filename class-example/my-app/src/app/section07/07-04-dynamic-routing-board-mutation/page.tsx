@@ -24,18 +24,25 @@ export default function DynamicRoutingBoardMutationPage() {
   const [myFunction] = useMutation(setting);
 
   const onClickSubmit = async () => {
-    const result = await myFunction({
-      variables: {
-        writer: writer,
-        title: title,
-        contents: contents,
-      },
-    });
-    const slug = result.data.createBoard.number;
-    console.log(result);
-    console.log(slug);
+    try {
+      const result = await myFunction({
+        variables: {
+          writer: writer,
+          title: title,
+          contents: contents,
+        },
+      });
+      const slug = result.data.createBoard.number;
+      console.log(result);
+      console.log(slug);
+      alert("success!")
+  
+      router.push(`/section07/07-04-dynamic-routing-board-mutation-moved/${slug}`)
+    } catch(error) {
+      
+    } finally {
 
-    router.push(`/section07/07-04-dynamic-routing-board-mutation-moved/${slug}`)
+    }
   };
 
   const onChangeWriter = (event: ChangeEvent<HTMLInputElement>) => {
