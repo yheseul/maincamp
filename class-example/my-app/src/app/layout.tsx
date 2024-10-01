@@ -19,12 +19,16 @@ export const metadata: Metadata = {
   description: "hi hello nice to meet you",
 };
 
-export default function RootLayout(props) {
+interface IProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({children}: IProps) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div>--------layout--------</div>
-        <ApolloSetting>{props.children}</ApolloSetting>
+        <ApolloSetting>{children}</ApolloSetting>
         <div>--------layout--------</div>
       </body>
     </html>
