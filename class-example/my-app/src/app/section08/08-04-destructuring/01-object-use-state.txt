@@ -1,0 +1,15 @@
+const useState = (initialValue) => {
+    let value = initialValue
+    const func = (changedValue) => {
+        console.log(`${value} => ${changedValue}`)
+    }
+    return [value, func]
+}
+
+const [count, setCount] = useState(0)
+
+count
+0
+
+setCount(10)
+0 => 10

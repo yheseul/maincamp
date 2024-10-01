@@ -1,0 +1,38 @@
+
+function useQuery() {
+    return {
+     data: {
+         fetchBoard: {
+             writer: "Alice"
+         }
+     },   
+        loading: false,
+        refetch: () =>{
+    console.log("refetch!!!")
+}    }
+}
+
+const result = useQuery("FETCH_BOARDS")
+result.data
+{fetchBoard: {…}}fetchBoard: writer: "Alice"[[Prototype]]: Object[[Prototype]]: Object
+
+result.loading
+false
+
+result.refetch
+() =>{
+    console.log("refetch!!!")
+}
+result.refetch()
+refetch!!!
+
+const {data, loading, refetch} = useQuery("FETCH_BOARDS")
+
+data
+{fetchBoard: {…}}
+
+loading
+false
+
+refetch()
+refetch!!!
