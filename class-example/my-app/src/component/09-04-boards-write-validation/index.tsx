@@ -53,11 +53,14 @@ export default function BoardsWrite(props: IBoardsWrite) {
   console.log(params.number);
 
   const onClickUpdate = async () => {
-    const myVariables = { number: Number(params.number) }
-	if(writer) myVariables.writer = writer
-	if(title) myVariables.title = title
-	if(contents) myVariables.contents = contents
-
+    const myVariables = {
+      writer,
+      title,
+      contents,
+    };
+    if (writer) myVariables.writer = writer;
+    if (title) myVariables.title = title;
+    if (contents) myVariables.contents = contents;
 
     const result = await updateBoard({
       variables: myVariables,
