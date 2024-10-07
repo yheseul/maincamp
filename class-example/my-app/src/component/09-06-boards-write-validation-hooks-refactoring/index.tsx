@@ -14,7 +14,7 @@ export default function BoardsWrite(props: IBoardsWrite) {
         type="text"
         onChange={onChangeWriter}
         placeholder="writer"
-        defaultValue={props.data?.fetchBoard.writer}
+        defaultValue={props.data?.fetchBoard.writer ?? ""}
       />
       <br />
       title :{" "}
@@ -22,7 +22,7 @@ export default function BoardsWrite(props: IBoardsWrite) {
         type="text"
         onChange={onChangeTitle}
         placeholder="title"
-        defaultValue={props.data?.fetchBoard.title}
+        defaultValue={props.data?.fetchBoard.title ?? ""}
       />
       <br />
       content :{" "}
@@ -30,7 +30,7 @@ export default function BoardsWrite(props: IBoardsWrite) {
         type="text"
         onChange={onChangeContents}
         placeholder="contents"
-        defaultValue={props.data?.fetchBoard.contents}
+        defaultValue={props.data?.fetchBoard.contents ?? ""}
       />
     </>
   );
