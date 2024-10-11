@@ -1,11 +1,6 @@
-import { ReactNode } from "react";
+import { IBoxProps } from "./typs";
 
-type TBox = {
-  children: ReactNode;
-  color: string;
-};
-
-export default function Box(props: TBox) {
+export default function Box(props: IBoxProps) {
   return (
     <>
       <div>apple</div>
