@@ -6,8 +6,8 @@ interface IApolloSetting {
     children: React.ReactNode
 }
 export default function ApolloSetting(props: IApolloSetting) {
-    const cliujent = new ApolloClient({
-        uri: "http://main-example.codebootcamp.co.kr/graphql",
+    const client = new ApolloClient({
+        uri: "http://main-practice.codebootcamp.co.kr/graphql",
         cache: new InMemoryCache()
     })    
 

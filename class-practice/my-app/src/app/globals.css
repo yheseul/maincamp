@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* my bootstrap */
+@layer utilities {
+  .greenTextBox {
+    color: green;
+    font-size: 30px
+  }
+}
+
+* {
+  font-family: var(--geistSans);
+}
