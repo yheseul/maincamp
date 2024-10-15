@@ -1,8 +1,8 @@
+import { ICommentItem } from "@/commons/types/15-04-comment-edit3/types";
 import { useState } from "react";
 
-export default function CommentItem(el) {
+export default function CommentItem(el: ICommentItem) {
   const [isEdit, setIsEdit] = useState(false);
-  console.log(el.title)
 
   const onClickEdit = () => {
     setIsEdit(true);
