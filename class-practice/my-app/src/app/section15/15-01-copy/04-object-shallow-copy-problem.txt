@@ -1,0 +1,22 @@
+const food = {
+  name: "omlet",
+  color: "yellow",
+  price: 10000,
+  ingredient: {
+      first: "egg",
+      seconde: "salt",
+  }
+}
+undefined
+
+const food2 = {...food}
+undefined
+
+food2.ingredient.seconde = "ketchup"
+'ketchup'
+
+food2
+{name: 'omlet', color: 'yellow', price: 10000, ingredient: {…}}color: "yellow"ingredient: {first: 'egg', seconde: 'ketchup'}first: "egg"seconde: "ketchup"[[Prototype]]: Objectname: "omlet"price: 10000[[Prototype]]: Object
+
+food
+{name: 'omlet', color: 'yellow', price: 10000, ingredient: {…}}color: "yellow"ingredient: {first: 'egg', seconde: 'ketchup'}name: "omlet"price: 10000[[Prototype]]: Object

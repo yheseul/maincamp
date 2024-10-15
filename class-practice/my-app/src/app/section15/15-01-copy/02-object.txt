@@ -1,0 +1,18 @@
+const menu = {
+  food: "omlet",
+  color: "yellow",
+  price: 10000,
+}
+undefined
+
+const menu2 = menu
+undefined
+
+menu2.food
+'omlet'
+
+menu2
+{food: 'omlet', color: 'yellow', price: 10000}
+
+menu
+{food: 'omlet', color: 'yellow', price: 10000}

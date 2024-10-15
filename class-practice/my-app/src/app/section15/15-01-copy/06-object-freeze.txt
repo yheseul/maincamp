@@ -1,0 +1,19 @@
+const food = {
+  name: "omlet",
+  color: "yellow",
+  price: 10000,
+  ingredient: {
+      first: "egg",
+      seconde: "salt",
+  }
+}
+undefined
+
+Object.freeze(food)
+{name: 'omlet', color: 'yellow', price: 10000, ingredient: {…}}
+
+food.name = "chicken"
+'chicken'
+
+food
+{name: 'omlet', color: 'yellow', price: 10000, ingredient: {…}}

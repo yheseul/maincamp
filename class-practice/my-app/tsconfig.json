@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/component/09-06-boards-write-validation-hooks-refactoring"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/component/09-06-boards-write-validation-hooks-refactoring", "src/app/section15/15-01-copy/01-number.tst"],
   "exclude": ["node_modules"]
 }

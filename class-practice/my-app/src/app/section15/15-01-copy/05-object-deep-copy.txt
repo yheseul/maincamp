@@ -1,0 +1,20 @@
+const food = {
+  name: "omlet",
+  color: "yellow",
+  price: 10000,
+  ingredient: {
+      first: "egg",
+      seconde: "salt",
+  }
+}
+undefined
+
+const food2 = JSON.parse(JSON.stringify(food))
+undefined
+
+food2
+{name: 'omlet', color: 'yellow', price: 10000, ingredient: {…}}
+color: "yellow"
+ingredient: {first: 'egg', seconde: 'salt'}
+name: "omlet"
+price: 10000
