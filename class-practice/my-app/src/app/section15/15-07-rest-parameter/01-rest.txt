@@ -1,0 +1,21 @@
+const food = {
+  name: "omlet",
+  color: "yellow",
+  price: 10000,
+}
+undefined
+
+const { color, ...rest } = food
+undefined
+
+rest
+{name: 'omlet', price: 10000}
+
+food
+{name: 'omlet', color: 'yellow', price: 10000}
+
+delete food.color
+true
+
+food
+{name: 'omlet', price: 10000}
