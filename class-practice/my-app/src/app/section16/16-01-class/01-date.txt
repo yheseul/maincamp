@@ -1,0 +1,64 @@
+class Date {
+  x = 3
+
+  getFullYear(){
+
+  }
+
+  getFullMonth(){
+    
+  }
+}
+
+// date => instance
+const date = new Date();
+
+date.x
+date.getFullYear()
+date.getFullMonth() // method
+
+const date2 = new Date(); // several time
+
+class Monster {
+    power = 50
+    attack() {
+        console.log("attack!!")
+    }
+}
+undefined
+
+class SuperMonster extends Monster {
+    // overriding
+    power = 100
+    run() {
+        console.log("run~~~")
+    }
+}
+undefined
+
+const monster = new Monster()
+undefined
+
+monster.power
+50
+
+monster.attack
+ƒ attack() {
+        console.log("attack!!")
+    }
+
+const supermonster = new SuperMonster()
+undefined
+
+supermonster.power
+100
+
+supermonster.attack
+ƒ attack() {
+        console.log("attack!!")
+    }
+    
+supermonster.run
+ƒ run() {
+        console.log("run~~~")
+    }
