@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>this-arrow-function</title>
+    <script>
+      class Counter {
+        count = 10;
+
+        up = () => {
+          console.log("up:", this);
+
+          console.log("up!");
+          this.count = this.count + 1;
+          console.log(this.count);
+        };
+
+        createButton() {
+          console.log("createButton:", this);
+
+          const button = document.createElement("button");
+          button.innerText = "count up";
+          button.addEventListener("click", this.up);
+
+          document.body.appendChild(button);
+        }
+      }
+
+      window.onload = () => {
+        const counter = new Counter();
+        counter.createButton();
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
