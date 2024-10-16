@@ -1,0 +1,10 @@
+this
+Window {0: Window, window: Window, self: Window, document: document, name: '', location: Location, …}
+
+function plus() {
+    console.log(this)
+}
+undefined
+
+plus()
+VM1385:2 Window {0: Window, window: Window, self: Window, document: document, name: '', location: Location, …}

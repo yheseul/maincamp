@@ -1,0 +1,11 @@
+const food = {
+  name: "omlet",
+  color: "yellow",
+  price: function () {
+      console.log(this)
+  },
+}
+undefined
+
+food.price()
+VM1546:5 {name: 'omlet', color: 'yellow', price: ƒ}

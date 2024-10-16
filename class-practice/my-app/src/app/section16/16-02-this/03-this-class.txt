@@ -1,0 +1,12 @@
+class Food {
+    name = "omlet"
+    color = "yellow"
+    price() {
+        console.log(this)
+    }
+}
+
+const food = new Food()
+
+food.price()
+Food {name: 'omlet', color: 'yellow'}
