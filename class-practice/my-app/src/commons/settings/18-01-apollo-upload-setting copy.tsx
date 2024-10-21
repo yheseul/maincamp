@@ -11,7 +11,7 @@ import createUploadLink from "apollo-upload-client/createUploadLink.mjs";
 interface IApolloSetting {
   children: React.ReactNode;
 }
-export default function IApolloUploadSetting(props: IApolloSetting) {
+export default function ApolloUploadSetting(props: IApolloSetting) {
   const uploadLink = createUploadLink({
     uri: "http://main-practice.codebootcamp.co.kr/graphql",
   });

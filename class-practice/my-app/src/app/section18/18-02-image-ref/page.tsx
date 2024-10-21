@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { gql, useMutation } from "@apollo/client";
 import { useState } from "react";
@@ -12,16 +12,17 @@ const UPLOAD_FILE = gql`
 `;
 
 export default function ImageUploadPage() {
-  const [uploadFile] = useMutation(UPLOAD_FILE);
   const [imageUrl, setImageUrl] = useState("");
 
+  const [uploadFile] = useMutation(UPLOAD_FILE);
+
   const onChangeFile = async (event) => {
-    const file = event.target.files?.[0]; //<input type="file multiple />
+    const file = event.target.files?.[0]; // 배열로 들어오는 이유: <input type="file" multiple /> 일 때, 여러개 드래그 가능
     console.log(file);
 
     const result = await uploadFile({ variables: { file } });
-    console.log(result.data.uploadFile.url);
-    setImageUrl(result.data.uploadFile.url ?? "");
+    console.log(result.data?.uploadFile.url);
+    setImageUrl(result.data?.uploadFile.url ?? "");
   };
 
   return (
