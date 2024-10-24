@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>fetch</title>
+    <script>
+      const myFetch = (endpoint) => {
+        return new Promise((resolve, reject) => {
+          const qq = new XMLHttpRequest();
+          qq.open("get", endpoint);
+          qq.send();
+          qq.addEventListener("load", (res) => {
+            resolve(res.target.response);
+          });
+        });
+      };
+
+      const onClickFetch = async () => {
+        myFetch("https://koreanjson.com/posts/1").then((res) => {
+          console.log(`.then: ${res}`);
+        });
+
+        const result = await myFetch("https://koreanjson.com/posts/1");
+        console.log(`await: ${result}`);
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="onClickFetch()">fetch</button>
+  </body>
+</html>
