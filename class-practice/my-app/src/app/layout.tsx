@@ -3,7 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 // import ApolloSetting from "@/commons/settings/06-02-apollo-setting";
 import Layout from "@/commons/layout";
-import ApolloUploadSetting from "@/commons/settings/22-01-apollo-header-setting";
+import ApolloUploadSetting from "@/commons/settings/22-02-apollo-header-setting-localstorage";
+// import ApolloUploadSetting from "@/commons/settings/22-01-apollo-header-setting";
 // import ApolloUploadSetting from "@/commons/settings/18-01-apollo-upload-setting copy";
 
 const geistSans = localFont({
