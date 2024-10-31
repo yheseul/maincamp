@@ -1,0 +1,18 @@
+.button_soft_m_full {
+  background-color: yellow;
+  height: 30px;
+  width: 100%;
+}
+
+.button_thin_fit_m {
+  background-color: blue;
+  height: 20px;
+  width: 100%;
+}
+
+.button_circle_m_m {
+  background-color: green;
+  height: 30px;
+  width: 100%;
+  border-radius: 20px;
+}
