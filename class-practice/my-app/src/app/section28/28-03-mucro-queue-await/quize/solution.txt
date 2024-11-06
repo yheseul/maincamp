@@ -1,0 +1,40 @@
+1.
+나의 답:
+start
+aaa start
+bbb start
+chicken
+aaa end
+end
+
+정답:
+aaa start
+bbb start
+aaa end
+end
+chicken
+
+async-await => Promise 
+micro queue에 담김
+
+2.
+나의 답:
+start
+aaa start
+bbb start
+aaa end
+end
+ccc start
+bbb end
+chicken
+
+정답:
+start
+aaa start
+bbb start
+ccc start
+aaa end
+end
+chicken
+bbb end
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>async-await</title>
+    <script>
+      const onClickButton = () => {
+        console.log("start");
+
+        function aaa() {
+          console.log("aaa start");
+          bbb();
+          console.log("aaa end");
+        }
+
+        async function bbb() {
+          console.log("bbb start");
+          const food = await "chicken";
+          console.log(food);
+        }
+
+        aaa();
+
+        console.log("end");
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="onClickButton()">start</button>
+  </body>
+</html>
