@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>macro-micro-queue</title>
+    <script>
+      const onClickButton = () => {
+        console.log("start");
+
+        // 매크로큐
+        setTimeout(() => {
+          new Promise((resolve) => resolve("hi")).then(() => {
+            console.log("Promise(setTimeout 내부에서 실행)");
+          });
+          console.log("setTimeout!! micro queue!! 0초 뒤에 실행");
+        }, 0);
+
+        // 마이크로큐
+        new Promise((resolve) => resolve("hello")).then(() => {
+          console.log("promise1!! micro queue!!");
+        });
+
+        // 매크로큐
+        setInterval(() => {
+          console.log("setInterval!! macro queue!! 0마다 실행");
+        }, 0);
+
+        let sum = 0;
+        for (let i = 0; i < 9000000000; i++) {
+          sum = sum + 1;
+        }
+
+        // 마이크로큐
+        new Promise((resolve) => resolve("bye")).then(() => {
+          console.log("promise2!! micro queue!!");
+        });
+
+        console.log("end");
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="onClickButton()">start</button>
+  </body>
+</html>
