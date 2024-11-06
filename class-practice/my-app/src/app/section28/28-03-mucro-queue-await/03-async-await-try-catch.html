@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>async-await-try-catch-eventLoop</title>
+    <script>
+      const onClickButton1 = () => {
+        try {
+          fetch("https://qqqq.com");
+          console.log("hi");
+        } catch (error) {
+          console.log("error");
+        }
+      };
+
+      const onClickButton2 = async () => {
+        try {
+          await fetch("https://qqqq.com");
+          console.log("hi");
+        } catch (error) {
+          console.log("error");
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="onClickButton1()">await 없이 요청하기</button>
+    <button onclick="onClickButton2()">await 함께 요청하기</button>
+  </body>
+</html>
