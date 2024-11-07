@@ -4,6 +4,7 @@ import { gql, useMutation } from "@apollo/client";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const setting = gql`
   mutation createBoard($createBoardInput: CreateBoardInput!) {
@@ -15,7 +16,6 @@ const setting = gql`
     }
   }
 `;
-import "react-quill/dist/quill.snow.css";
 
 export default function WebEditor() {
   const [myFunction] = useMutation(setting);
@@ -53,7 +53,7 @@ export default function WebEditor() {
     const { Modal } = await import("antd"); // code-spliting
     Modal.success({ content: "success!!" });
 
-    const boardId = result.data.createBoard._id
+    const boardId = result.data.createBoard._id;
 
     router.push(`/section30/30-02-web-editor-hook-form/${boardId}`);
   };
