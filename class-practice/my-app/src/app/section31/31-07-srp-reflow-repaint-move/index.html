@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>reflow-repaint-move</title>
+  </head>
+  <style>
+    .reflow {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .reflow:hover {
+      left: 20px;
+    }
+
+    .repaint {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(245, 173, 197);
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      will-change: transform;
+    }
+
+    .repaint:hover {
+      transform: translateX(20px);
+    }
+  </style>
+  <body>
+    <div class="reflow">reflow move</div>
+    <div class="repaint">repaint move</div>
+  </body>
+</html>
