@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>reflow-repaint</title>
+  </head>
+  <style>
+    .reflow {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .reflow:hover {
+      width: 300px;
+      height: 300px;
+    }
+
+    .repaint {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(245, 173, 197);
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .repaint:hover {
+      background-color: rgb(139, 222, 192);
+    }
+  </style>
+  <body>
+    <div class="reflow">reflow</div>
+    <div class="repaint">repaint</div>
+  </body>
+</html>
