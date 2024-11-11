@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Promise All</title>
+  </head>
+  <script>
+    // promise
+    const startPromise = async () => {
+      console.time("=== promise ===");
+      const result1 = await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("success1");
+        }, 2000);
+      });
+
+      const result2 = await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("success2");
+        }, 3000);
+      });
+
+      const result3 = await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("success3");
+        }, 1000);
+      });
+      const results = [result1, result2, result3];
+      console.log(results);
+
+      console.timeEnd("=== promise ===");
+    };
+
+    // promiseAll
+    const startPromiseAll = async () => {
+      // await Promise.all([promise, promise, promise])
+      // await Promise.all([fetch, fetch, fetch])
+
+      console.time("=== promiseAll ===");
+
+      const results = await Promise.all([
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("success1");
+          }, 2000);
+        }),
+
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("success2");
+          }, 3000);
+        }),
+
+        new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("success3");
+          }, 1000);
+        }),
+      ]);
+
+      console.log(results);
+      console.timeEnd("=== promiseAll ===");
+    };
+  </script>
+  <body>
+    <button onclick="startPromise()">promise</button>
+    <button onclick="startPromiseAll()">promiseAll</button>
+  </body>
+</html>
