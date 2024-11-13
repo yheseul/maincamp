@@ -31,6 +31,7 @@ interface IProps {
 export default function RootLayout({ children }: IProps) {
   return (
     <html lang="en">
+      <meta/>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div>--------layout--------</div>
         <ApolloUploadSetting>
