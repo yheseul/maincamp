@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/component/09-06-boards-write-validation-hooks-refactoring", "src/app/section15/15-01-copy/01-number.tst"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/component/09-06-boards-write-validation-hooks-refactoring", "src/app/section15/15-01-copy/01-number.tst", "src/commons/settings/26-01-apollo-header-setting-onError.tsx"],
   "exclude": ["node_modules"]
 }
