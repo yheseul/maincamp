@@ -26,13 +26,15 @@ export const metadata: Metadata = {
 
 interface IProps {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }
 
-export default function RootLayout({ children }: IProps) {
+export default function RootLayout({ children, modal }: IProps) {
   return (
     <html lang="en">
-      <meta/>
+      <meta />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div>{modal}</div>
         <div>--------layout--------</div>
         <ApolloUploadSetting>
           <Layout>{children}</Layout>
