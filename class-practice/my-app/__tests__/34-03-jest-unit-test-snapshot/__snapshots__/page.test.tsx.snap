@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`기존 사진이랑 바뀐 거 비교 - snapshot test 1`] = `
+<div>
+  <div>
+    <div>
+      hello
+    </div>
+    hobby: 
+    <input
+      type="text"
+    />
+    <button>
+      go
+    </button>
+  </div>
+</div>
+`;
