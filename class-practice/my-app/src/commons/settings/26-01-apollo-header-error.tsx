@@ -12,15 +12,6 @@ import { useAccessTokenStore } from "../stores/22-01-access-token-store";
 import { useEffect } from "react";
 import { onError } from "@apollo/client/link/error";
 import { getAccessToken } from "../libraries/26-01-getAccessToken";
-import { gql } from "graphql-request";
-
-const RESTORE_ACCESS_TOKEN = gql`
-  mutation restoreAccessToken {
-    restoreAccessToken {
-      accessToken
-    }
-  }
-`;
 
 const GLOBAL_STATE = new InMemoryCache();
 
